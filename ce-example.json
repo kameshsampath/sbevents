@@ -1,0 +1,12 @@
+{
+    "specversion": "1.0",
+    "id": "5f4d99ab-bc38-4d50-9e31-b04f6ff0e58c",
+    "source": "http://localhost:8080/uppercase",
+    "type": "com.redhat.faas.springboot.test",
+    "datacontenttype": "application/json",
+    "subject": "UpperCase",
+    "time": "2020-11-24T16:06:12.44606Z",
+    "data": {
+        "input": "hello"
+    }
+}
