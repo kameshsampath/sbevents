@@ -66,4 +66,25 @@ public class SpringCloudEventsApplication {
           .setType("com.redhat.faas.springboot.events");
     };
   }
+
+  /**
+   * Health checks
+   * @return if the probe is
+   *  - liveness then "live"
+   *  - readiness then "ready"
+   *  -
+   */
+  @Bean
+  public Function<String, String> health() {
+    return probe -> {
+      if ("readiness".equals(probe)) {
+        return "ready";
+      } else if ("liveness".equals(probe)) {
+        return "live";
+      } else {
+        return "OK";
+      }
+    };
+  }
+
 }
